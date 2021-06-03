@@ -13,6 +13,7 @@ namespace Payroll_ADO_DOT_NET
             Console.WriteLine(" Employee Payroll Service Project Using ADO.NET Framework");
             EmployeeRepo repo = new EmployeeRepo(); 
             repo.CheckConnection();
+            repo.GetAllEmployee();
         }
     }
 }
