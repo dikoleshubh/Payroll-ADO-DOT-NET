@@ -33,7 +33,9 @@ namespace Payroll_ADO_DOT_NET
             repository.AddEmployee(model);
 
             Console.WriteLine(repository.UpdateSalaryIntoDatabase("Venu", 50000) ? "Update done successfully " : "Update Failed");
+            repository.GetEmployeesFromForDateRange("2018 - 05 - 03");
         }
+        
     }
 }
 

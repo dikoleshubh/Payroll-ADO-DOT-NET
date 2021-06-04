@@ -41,7 +41,7 @@ namespace Payroll_ADO_DOT_NET
 
 
         /// UC2 Ability for Employee Payroll Service to retrieve the Employee Payroll from the Database
-        public void GetAllEmployee()
+        public void GetAllEmployee(string query)
         {
             try
             {
@@ -168,6 +168,11 @@ namespace Payroll_ADO_DOT_NET
             {
                 connection.Close();
             }
+        }
+        public void GetEmployeesFromForDateRange(string date)
+        {
+            string query = $@"select * from dbo.PAYROLL where StartDate between cast('{date}' as date) and cast(getdate() as date)";
+            GetAllEmployee(query);
         }
 
     }
